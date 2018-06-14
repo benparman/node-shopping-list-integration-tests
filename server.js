@@ -1,4 +1,5 @@
 
+'use strict';
 const express = require('express');
 const morgan = require('morgan');
 
@@ -39,7 +40,7 @@ function runServer() {
       console.log(`Your app is listening on port ${port}`);
       resolve(server);
     }).on('error', err => {
-      reject(err)
+      reject(err);
     });
   });
 }
